@@ -82,7 +82,7 @@ app.get('/api/weather', async (req, res) => {
     const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${OWM_KEY}`;
     const current = await fetchJSON(currentUrl) as any;
 
-    const oneCallUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${current.coord.lat}&lon=${current.coord.lon}&appid=${OWM_KEY}`;
+    const oneCallUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${current.coord.lat}&lon=${current.coord.lon}&appid=${OWM_KEY}`;
     const forecast = await fetchJSON(oneCallUrl) as any;
 
     const normalized = normalize(current, forecast);

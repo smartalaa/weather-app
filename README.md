@@ -26,7 +26,7 @@ A modern, responsive weather dashboard application built with React, TypeScript,
 - **Express** - Node.js web framework
 - **LRU Cache** - Intelligent data caching
 - **Node Fetch** - HTTP client for API requests
-- **OpenWeatherMap API** - Weather data source
+- **OpenWeatherMap API 3.0** - Weather data source (free tier)
 
 ## Prerequisites
 
@@ -65,10 +65,13 @@ PORT=8787
 
 **To get your API key:**
 1. Visit [OpenWeatherMap](https://openweathermap.org/api)
-2. Sign up for a free account
+2. Sign up for a free account (the free tier is sufficient)
 3. Navigate to your [API keys page](https://home.openweathermap.org/api_keys)
 4. Generate a new API key
-5. **Note:** New API keys can take 1-2 hours to activate
+5. Copy the key and paste it into your `.env` file
+6. **Important:** New API keys can take 1-2 hours to activate
+
+**Note:** This app uses OpenWeatherMap's **One Call API 3.0**, which is available on the free tier with up to 1,000 calls per day.
 
 ### 4. Run the Application
 
@@ -193,7 +196,8 @@ Fetch weather data for a specific city.
 - **401 Error**: API key is invalid or not activated yet
   - Wait 1-2 hours for new keys to activate
   - Verify the key is correct in `.env`
-  - Check your OpenWeatherMap account status
+  - Ensure you're using the correct API key from your OpenWeatherMap account
+  - The app uses One Call API 3.0 which is included in the free tier
 
 ### Port Already in Use
 - If port 5173 is occupied, Vite will automatically try the next available port
