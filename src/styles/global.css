@@ -122,6 +122,7 @@ button:hover {
   background: var(--bg-alt);
   border: 1px solid var(--accent);
   padding: .3rem .6rem;
+  color: var(--text);
 }
 
 .error {
