@@ -1,0 +1,17 @@
+:root {
+  --bg: #0d1117;
+  --bg-alt: #161b22;
+  --text: #f0f6fc;
+  --accent: #58a6ff;
+  --error: #ff6b6b;
+  --radius: 8px;
+  --font-stack: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f7fa;
+    --bg-alt: #ffffff;
+    --text: #1b1f23;
+    --accent: #0366d6;
+  }
+}
